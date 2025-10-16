@@ -13,7 +13,7 @@ const Container = ({children, className}: Props) => {
     <SafeAreaView style={tw`bg-white flex-1 ${Platform.OS==='android'?'mt-0':'mt-0'}`}>
         
         <View style={[tw`p-5`, className?tw `${className}` : null]}>
-            <Text>Container</Text>
+            {children}
         </View>
 
   </SafeAreaView>

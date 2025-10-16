@@ -1,38 +1,27 @@
 import { Image } from 'expo-image';
-import { Platform, StyleSheet, View, Text } from 'react-native';
+import { View, Text } from 'react-native';
 
 import { Link } from 'expo-router';
 import tw from "twrnc"
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Container from '@/components/ui/Container';
+import SearchBar from '@/components/SearchBar';
+import NavOptions from '@/components/NavOptions';
+
 
 
 export default function HomeScreen() {
   return (
+    // <View>
+    //   <Text>bhkjbjb</Text>
+    // </View>
     <Container >
- 
-      <View style= {tw`bg-red-200`}>
-        <Text>Errand App</Text>
-      </View>
+      <Image source={{uri:"https://i.ibb.co.com/Xz5pKDQ/logo-black.png"}}
+       style={tw`w-24 h-10`}
+       contentFit='contain'/>
+       <SearchBar/>
+       <NavOptions/>
     </Container>
   );
 }
 
-const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-  },
-});
