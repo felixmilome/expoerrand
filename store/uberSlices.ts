@@ -16,13 +16,13 @@ export const uberSlices = createSlice({
         setDestination: (state, action) => {
             state.destination = action.payload;
         },
-        settravelTimeInformation: (state, action) => {
+        setTravelTimeInformation: (state, action) => {
             state.travelTimeInformation = action.payload;
         },
     },
 
 })
-export const {setOrigin, setDestination, settravelTimeInformation} = uberSlices.actions;
+export const {setOrigin, setDestination, setTravelTimeInformation} = uberSlices.actions;
 
 export const selectOrigin = (state: UberState) => state.uber.origin;
 export const selectDestination = (state: UberState) => state.uber.destination;

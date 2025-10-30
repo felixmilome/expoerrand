@@ -47,11 +47,16 @@ const SearchBar = () => {
           components: "country:ke", // limit to Kenya, change if needed
         },
       });
-      console.log(res?.data)
+
+      // console.log(res?.data)
       setPredictions(res.data.predictions || []);
+
     } catch (err) {
+
       console.error("Google Autocomplete Error:", err);
+
     } finally {
+
       setLoading(false);
       
     }
@@ -68,14 +73,14 @@ const SearchBar = () => {
           fields: "geometry,name,formatted_address",
         },
       });
-      console.log(details?.data)
+      // console.log(details?.data)
 
-      const location = details.data.result.geometry.location;
+      const location = details?.data?.result?.geometry?.location;
 
       dispatch(
         setOrigin({
           location,
-          description: place.description,
+          description: place?.description,
         })
       );
       dispatch(setDestination(null));

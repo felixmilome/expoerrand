@@ -4,7 +4,7 @@ import { View, Text } from 'react-native';
 import { Link } from 'expo-router';
 import tw from "twrnc"
 import { SafeAreaView } from 'react-native-safe-area-context';
-import Container from '@/components/ui/Container';
+import Container from '@/components/Container';
 import SearchBar from '@/components/SearchBar';
 import NavOptions from '@/components/NavOptions';
 
